@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<title>Geluid Booster</title>
+<link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <header>
+    <img src="icons/icon32.png" alt="" width="24" height="24">
+    <h1>Geluid Booster</h1>
+  </header>
+
+  <div id="main">
+    <div class="level"><span id="value">100</span><span class="pct">%</span></div>
+    <p id="hint" class="hint">Schuif naar rechts voor harder geluid.</p>
+
+    <input id="slider" type="range" min="0" max="600" step="10" value="100" aria-label="Volume in procent">
+    <div class="scale"><span>0%</span><span>100%</span><span>300%</span><span>600%</span></div>
+
+    <div class="presets">
+      <button data-p="100">100%</button>
+      <button data-p="200">200%</button>
+      <button data-p="300">300%</button>
+      <button data-p="400">400%</button>
+      <button data-p="600">600%</button>
+    </div>
+
+    <label class="check">
+      <input id="limiter" type="checkbox" checked>
+      Kraken voorkomen <small>(aanbevolen)</small>
+    </label>
+
+    <button id="reset" class="reset">Terug naar normaal</button>
+  </div>
+
+  <p id="error" class="error" hidden></p>
+
+  <script src="popup.js"></script>
+</body>
+</html>
